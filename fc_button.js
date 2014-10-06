@@ -406,6 +406,8 @@ function FCMenu() {
     resetHC = Game.HowMuchPrestige(Game.cookiesReset + Game.cookiesEarned + wrinklerValue() + chocolateValue());
     subsection.append($('<div>').addClass('listing').html('<b>HC Now:</b> ' + Beautify(Game.heavenlyChipsEarned)));
     subsection.append($('<div>').addClass('listing').html('<b>HC After Reset:</b> ' + Beautify(resetHC)));
+    subsection.append($('<div>').addClass('listing').html('<b>HC Gained by Resetting:</b> ' + Beautify(gainedHC())));
+    subsection.append($('<div>').addClass('listing').html('<b>Heavenly Chips to earn before efficient resetting:</b> ' + Beautify(estimatedHCTillReset())));
     subsection.append($('<div>').addClass('listing').html('<b>Cookies to next HC:</b> ' + Beautify(nextHC(true))));
     subsection.append($('<div>').addClass('listing').html('<b>Estimated time to next HC:</b> ' + nextHC()));
     if (currHC < resetHC) {
